@@ -1,0 +1,19 @@
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent }  from './app.component';
+import { HeaderComponent }  from './header.component';
+import { ContainComponent }  from './contain.component';
+import { FooterComponent }  from './footer.component';
+
+import { HomeService }  from './home.service'; //Import the globally available service
+
+
+
+@NgModule({
+  imports:      [ BrowserModule ],
+  declarations: [ AppComponent, HeaderComponent, ContainComponent, FooterComponent ],
+  providers:    [ HomeService ], // Register the service as a provider with the AppModule which will make the service available to all the components in the application
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
